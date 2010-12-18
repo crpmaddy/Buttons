@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,9 +8,9 @@
     <meta name="language" content="en/US" />
     <title>UI Experiments</title>
     <link rel="stylesheet" type="text/css" 
-             href="http://ajax.googleapis.com/ajax/libs/yui/2.8.1/build/reset-fonts-grids/reset-fonts-grids.css" /> 
+             href="css/vendor/reset-fonts-grids.css" /> 
     <link rel="stylesheet/less" href="css/style.less" type="text/css" />
-    <script type="text/javascript" src="http://lesscss.googlecode.com/files/less-1.0.35.min.js"></script>
+    <script type="text/javascript" src="js/vendor/less-1.0.35.min.js"></script>
     <script type="text/javascript">
       less.env = "development";
       less.watch();
@@ -24,6 +25,21 @@
       <input type="button" value="Input button" class="button" title="This does nothing" alt="Input Label" />
       <span class="button">Span as a button</span>
       <button class="button" title="A Button">a button</button>
+    </section>
+    <section>
+       <h2>Bubble</h2>
+       <div class="brillant">
+         <pre>
+ package test;
+ public class paulaBean {
+   private String paula = "Brillant";
+   public String getPaula() {
+     return paula;
+   }
+ }
+         </pre>
+         <div class="arrow"></div>
+       </div>
     </section>
     <section>
       <h2>Forms</h2>

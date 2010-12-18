@@ -18,3 +18,32 @@
   -webkit-box-shadow: @horizontal @vertical @blur @color;
    box-shadow: @horizontal @vertical @blur @color;
 }
+
+.rotate(@angle: 45deg)
+{
+    -moz-transform:rotate(@angle);
+    -webkit-transform:rotate(@angle);
+    -o-transform:rotate(@angle);
+}
+
+.bubble(@border: 1px solid #aaa, @background-color: #f0f0f0)
+{
+        border: @border;
+        background-color: @background-color;
+        display: inline-block;
+        padding: 10px 10px 10px 10px;
+        .roundedCorners(8px);
+         position: relative;
+        .arrow {
+            border-left: @border;
+            border-bottom: @border;
+            background-color: @background-color;
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            .rotate(-45deg);
+            position: absolute;
+            left: 15px;
+            bottom: -9px;
+        }
+}

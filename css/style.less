@@ -78,12 +78,59 @@ label.error
   background-color: #ffc;
 }
 
-.brillant {
+.bubble {
     color: #888;
-    .bubble(1px solid #ddd, #f7f7f7);
+    .fBubble(1px solid #ddd, #f7f7f7);
 }
 
 
 code {
     font-family: Monospace;
+}
+
+
+.activitymonitor {
+    width: 100%;
+    color: #777;
+    thead {
+        color: #000;
+        tr {
+            .gradientBackground(#fff,#eee);
+            border-bottom: 1px solid #ddd;
+            border-top: 1px solid #ddd;
+            th {
+                border-left: 1px solid #ddd;
+            }
+        }
+    }
+
+    thead tr, tbody tr {
+        th, td {
+            white-space: nowrap;
+            padding: 3px 5px 1px 5px;
+        }
+    }
+
+    tbody {
+        tr:nth-child(odd) {background-color: #f4f4f4; }
+        tr:hover { 
+            color: #000;
+            background-color: #ffffdd;
+            .fTransition(color 300ms ease-in-out);
+            .fTransition(background-color 300ms ease);
+        }
+        tr {
+
+            td[axis="process"] {
+                min-width: 15px;
+            }
+
+            td[axis='pid'], 
+            td[axis='cpu'], 
+            td[axis='threads'],
+            td[axis='mem'] {
+                text-align: right;
+            }
+        }
+    }
 }

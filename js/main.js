@@ -1,14 +1,18 @@
 require(['js/vendor/less-1.0.35.min.js',
-             'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'], function() {
-
-  require(['http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.min.js',
-               'https://github.com/jquery/jquery-metadata/raw/master/jquery.metadata.js',
+             'js/vendor/jquery.min.js'], function() {
+  require(['js/vendor/jquery.validate.min.js',
+               'js/vendor/jquery.metadata.js',
+               'js/vendor/jquery.ba-resize.min.js',
                'js/jquery.asmform.js',
+               'js/jquery.shrinktext.js',
                'js/jquery.log.js'], function() {
     require.ready(function() {
         $('#asmform').asmform();
-//        less.env = "development";
-//        less.watch();
+
+        $('td[axis="process"]').shrinktext();
+
+        less.env = "development";
+        less.watch();
      });
    });
 });

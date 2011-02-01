@@ -3,11 +3,17 @@
 @import "buttons.less";
 @import "forms.less";
 
+a {
+  text-decoration: none;
+  color: #2A41D4;
+}
+
+
 .form
 { 
   .roundedCorners(6px);
   background-color: #f7f7f7;
-  width: 310px;
+  width: 210px;
   padding: 20px 20px 20px 20px;
 }
 
@@ -31,7 +37,7 @@ form
       {
         label
         { 
-          color: #777;
+          color: #999;
           font-size: 12pt;
         }
       }
@@ -43,7 +49,7 @@ form
           /* structure */
           .roundedCorners(3px);
           padding: 3px 3px 3px 3px;
-          width: 300px;
+          width: 200px;
 
           /* look+feel */
           .gradientBackground(#eee,#fff);
@@ -122,7 +128,9 @@ code {
         tr {
 
             td[axis="process"] {
-                min-width: 15px;
+                min-width: 10px;
+                overflow: hidden;
+                
             }
 
             td[axis='pid'], 
@@ -130,6 +138,7 @@ code {
             td[axis='threads'],
             td[axis='mem'] {
                 text-align: right;
+                width: 10px;
             }
         }
     }

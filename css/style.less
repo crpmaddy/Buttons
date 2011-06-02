@@ -150,9 +150,21 @@ code {
 }
 
 #columns {
-  .columns();
-  text-align: justify;
-  text-justify: newspaper;
+  article {
+    .columns(180px);
+    text-align: justify;
+    text-justify: newspaper;
+
+    p:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  article:first-letter { 
+    color: black;
+    font-size: 120%;
+    font-weight: bold;
+  }
+
   h2 { 
     .column-span();
   }

@@ -1,5 +1,4 @@
 @import "definitions.less";
-@import "document.less";
 @import "buttons.less";
 @import "forms.less";
 
@@ -7,7 +6,35 @@
   display: inherit;
 }
 
-a {
+html
+{
+  background-color: #fff;
+  color: #444;
+}
+
+body
+{
+  padding: 20px 20px 20px 20px;
+  text-align: left;
+  font-family: helvetica;
+  margin: 50px auto;
+}
+
+section
+{
+  margin-bottom: 50px;
+}
+
+h2
+{
+  color: #666;
+  font-size: 18pt;
+  margin: 0 0 20px 0;
+  padding: 0 0 0 0;
+  border-bottom: 1px dotted #ddd;
+  letter-spacing: 1px;
+
+}a {
   text-decoration: none;
   color: #2A41D4;
 }
@@ -54,7 +81,6 @@ form
           .roundedCorners(3px);
           padding: 3px 3px 3px 3px;
           width: 200px;
-          resize: horizontal;
 
           /* look+feel */
           .gradientBackground(#eee,#fff);
@@ -167,5 +193,28 @@ code {
 
   h2 { 
     .column-span();
+  }
+}
+
+#typography {
+  background-repeat: repeat;
+  background-image: url('../img/tile.png');
+  padding: 10px;
+  .roundedCorners(2px);
+
+  h3 {
+    font-size: 45pt;
+
+    color: transparent;
+    opacity: 0.95;
+    background: url('../img/mask.png');
+    background-repeat: repeat;
+    -webkit-background-clip: text, border;
+    font-family: 'Amatic SC', helvetica, arial;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+
+    // color: rgba(255,255,255,0.9);
+    // .mask-image(url('../img/mask.png'));
+    // text-shadow: 1px 1px 0px white;
   }
 }
